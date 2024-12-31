@@ -19,6 +19,19 @@
 
     <!-- using dynamic attribute -->
     <a :[attributeName]="Url" target="_blank">Company Website</a>
+
+    <!-- using ref -->
+    <button @click="hanfleIncrement">{{ count }}</button>
+
+    <!-- Deep Reactivity -->
+     <br> <br>
+     <div>
+       <h2>Deep Reactivity</h2>
+       
+       <button @click="ChangeNestedCount">Change Count</button>
+       <p>Nested Count: {{ obj.nested.count }}</p>
+       <p>Array: {{ obj.arr }}</p>
+     </div>
   </div>
 </template>
 
@@ -36,9 +49,25 @@ const handdleAge = () => {
   }
 };
 
+const count = ref<number>(0);
+function hanfleIncrement() {
+  count.value++;
+}
 
 const attributeName = ref<string>("href");
-const Url = ref<string>("http://fennelsoft.com")
+const Url = ref<string>("http://facebook.com");
+
+// Deep Reactivity
+
+const obj = ref({
+  nested: { count: 0 },
+  arr: ["Apple", "Facebook"],
+});
+
+function ChangeNestedCount() {
+  obj.value.nested.count++;
+  obj.value.arr.push("Banana");
+}
 </script>
 
 <style scoped></style>

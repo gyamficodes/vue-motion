@@ -1,8 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HelloWorld from "../components/HelloWorld.vue"
+</script>
 
 <template>
-  <h1 class="text-2xl font-bold underline">Hello, Tailwind CSS!</h1>
-  <p>This is a Vue 3 component using Tailwind CSS.</p>
+   <HelloWorld/>
 </template>
 
 <style></style>

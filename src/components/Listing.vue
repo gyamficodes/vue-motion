@@ -16,6 +16,22 @@
         {{ item.message }}
       </div>
     </div>
+
+
+
+    <h1>Categories with Items</h1>
+    <ul>
+      <!-- Outer loop: Iterate through categories -->
+      <li v-for="(category, categoryIndex) in categories" :key="categoryIndex">
+        <strong>{{ category.name }}</strong>
+        <ul>
+          <!-- Inner loop: Iterate through items in each category -->
+          <li v-for="(item, itemIndex) in category.items" :key="itemIndex">
+            {{ item }}
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -29,6 +45,31 @@ interface itmess {
 }
 
 const items = ref<itmess[]>([{ message: "Foo" }, { message: "Bar" }]);
+
+
+// Define the structure of a category and its items
+interface Category {
+  name: string; // Name of the category
+  items: string[]; // List of items in the category
+}
+
+
+const categories = ref<Category[]>([
+      {
+        name: 'Fruits',
+        items: ['Apple', 'Banana', 'Cherry'],
+      },
+      {
+        name: 'Vegetables',
+        items: ['Carrot', 'Broccoli', 'Spinach'],
+      },
+      {
+        name: 'Dairy',
+        items: ['Milk', 'Cheese', 'Yogurt'],
+      },
+    ]);
+
+
 </script>
 
 <style scoped></style>

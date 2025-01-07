@@ -11,6 +11,10 @@
       <div v-else-if="myType === 'B'">I like B</div>
       <div v-else-if="myType === 'C'">I like C</div>
       <div v-else>Not A/B/C</div>
+
+      <div v-for="item in items">
+        {{ item.message }}
+      </div>
     </div>
   </div>
 </template>
@@ -18,8 +22,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
 const greeting = ref<boolean>(true);
-
 const myType = ref<string>("A");
+
+interface itmess {
+  message: string;
+}
+
+const items = ref<itmess[]>([{ message: "Foo" }, { message: "Bar" }]);
 </script>
 
 <style scoped></style>

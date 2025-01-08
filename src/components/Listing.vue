@@ -32,11 +32,25 @@
         </ul>
       </li>
     </ul>
-  </div>
+
+
+
+
+<!-- looping through an object -->
+
+
+<div class=" mb-5">
+    <ol v-for="(value , index) in Persons" :key="index">
+<li>{{ value }}</li>
+    </ol>
+</div>
+
+
+</div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 const greeting = ref<boolean>(true);
 const myType = ref<string>("A");
 
@@ -69,6 +83,18 @@ const categories = ref<Category[]>([
       },
     ]);
 
+
+interface PersonData {
+    name: string;
+    age:number;
+    Work: string;
+}
+
+    const Persons =  reactive<PersonData>({
+        name: "John Doe",
+        age: 30,
+        Work: "Engineer"
+    })
 
 </script>
 

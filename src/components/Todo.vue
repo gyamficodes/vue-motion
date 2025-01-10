@@ -1,15 +1,15 @@
 <template>
   <div>
     <h1 class="mt-5">Todo</h1>
-    <form  v-on:submit.prevent="addTodo">
-        <label for=""></label>
-      <input 
+    <form v-on:submit.prevent="addTodo">
+      <label for=""></label>
+      <input
         type="text"
         v-model="inputText"
         class="border h-[40px] mr-1"
         placeholder="Enter your Todo"
       />
-      <button class=" h-[40px] border bg-[#f8f8f8]">AddTod</button>
+      <button class="h-[40px] border bg-[#f8f8f8]">AddTod</button>
     </form>
 
     <TodoItem
@@ -35,7 +35,7 @@ interface todoDatails {
   id: number;
   title: string;
 }
-let nextTodoId = 4
+let nextTodoId = 4;
 const todos = ref<todoDatails[]>([
   {
     id: 1,
@@ -56,7 +56,6 @@ const addTodo = () => {
     todos.value.push({
       id: nextTodoId++,
       title: inputText.value,
-        
     });
     inputText.value = "";
   }

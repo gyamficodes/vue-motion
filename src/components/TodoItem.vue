@@ -1,11 +1,9 @@
 <template>
   <div>
-     
-        <li>
-            {{ props.title }}
-    <button @click="$emit('remove')">Delete</button>
-        </li>
-     
+    <li>
+      {{ props.title }}
+      <button @click="$emit('remove')">Delete</button>
+    </li>
   </div>
 </template>
 

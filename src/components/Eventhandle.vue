@@ -31,35 +31,58 @@
     <textarea v-model="news" placeholder="add multiple lines"></textarea>
 
     <!-- Dealing with checkbox -->
-<br>
+    <br />
     <input type="checkbox" id="checkbox" v-model="checked" />
-    <button class=" px-3 py-3 border" @click="handdleSucscribe">Subscribe</button>
-    <h1 :class="checked ? 'text-2xl text-green-600' : 'text-2xl text-red-600'" >{{ SubscribesMessage }}</h1>
+    <button class="px-3 py-3 border" @click="handdleSucscribe">
+      Subscribe
+    </button>
+    <h1 :class="checked ? 'text-2xl text-green-600' : 'text-2xl text-red-600'">
+      {{ SubscribesMessage }}
+    </h1>
+
+    <!-- Select Input -->
+    <select v-model="selected">
+  <option v-for="option in options" :value="option.value">
+    {{ option.text }}
+  </option>
+</select>
+
+<div>Selected: {{ selected }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-
+const Message = ref<string>("");
+const news = ref<string>("");
+const checked = ref<boolean>(false);
+const SubscribesMessage = ref<string>("");
 const count = ref<number>(0);
+ const selected = ref('A')
+
+ interface optionData {
+    text: string;
+    value: string;
+ 
+ }
+
+const options = ref<optionData[]>([
+  { text: 'One', value: 'A' },
+  { text: 'Two', value: 'B' },
+  { text: 'Three', value: 'C' }
+])
+
 const HanddleMessage = (message: string) => {
   alert(message);
 };
-
-const Message = ref<string>("");
-
-const news = ref<string>("");
-
-const checked = ref<boolean>(false);
-
-const SubscribesMessage = ref<string>("");
 
 const handdleSucscribe = () => {
   const checkbox = document.getElementById("checkbox") as HTMLInputElement;
   if (checkbox && checkbox.checked) {
     SubscribesMessage.value = "You have Subscribe Succesfully to the channel";
   } else {
-    SubscribesMessage.value = "You have not Subscribe Yet , And you can do that by pressing the button below.";
+    SubscribesMessage.value =
+      "You have not Subscribe Yet , And you can do that by pressing the button below.";
   }
 };
 </script>

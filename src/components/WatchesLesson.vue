@@ -6,7 +6,6 @@
     </div>
 
     <h1>{{ answers }}</h1>
-
   </div>
 </template>
 
@@ -41,7 +40,7 @@ const total = ref<number>();
 watch(
   () => X.value + y.value,
   (sum) => {
-   console.log(`${sum}`);
+    console.log(`${sum}`);
   }
 );
 </script>

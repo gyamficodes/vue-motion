@@ -4,6 +4,7 @@
     <Todo />
     <Eventhandle />
     <WatchesLesson />
+    <OtherLesson/>
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import Todo from "@/components/Todo.vue";
 import Eventhandle from "@/components/Eventhandle.vue";
 import WatchesLesson from "@/components/WatchesLesson.vue";
+import OtherLesson from "@/components/OtherLesson.vue";
 </script>
 
 <style></style>

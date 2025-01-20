@@ -4,7 +4,7 @@
     <Todo />
     <Eventhandle />
     <WatchesLesson />
-    <OtherLesson/>
+    <OtherLesson  Title="Post 1" Content="This is about blog post"/>
   </div>
 </template>
 

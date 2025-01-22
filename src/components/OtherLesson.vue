@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" ref="my-input" placeholder="Your Name" />\
+    <input type="text" ref="my-input" placeholder="Your Name" />
 
     <ul v-for="item in List" ref="items">
       <li>{{ item }}</li>

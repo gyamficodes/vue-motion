@@ -5,6 +5,12 @@ this hook
 </template>
 
 <script setup lang="ts">
+//unmounted hook
+import { onUnmounted } from 'vue';
+
+onUnmounted(() => {{ 
+    alert('Continue learning')
+ }})
 
 </script>
 

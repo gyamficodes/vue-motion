@@ -5,9 +5,10 @@
     <ul v-for="item in List" ref="items">
       <li>{{ item }}</li>
     </ul>
-
     <h1>{{ props.Title }}</h1>
     <h2>{{ props.Content }}</h2>
+
+
   </div>
 </template>
 
@@ -16,8 +17,8 @@ import { useTemplateRef, onUnmounted, watchEffect, ref } from "vue";
 const input = useTemplateRef("my-input");
 const itemsList = useTemplateRef("items");
 const List = ref([]);
+let props = defineProps(["Title", "Content"]);
 
- let props = defineProps(['Title', 'Content'])
 
 onUnmounted(() => {
   input.value?.focus();

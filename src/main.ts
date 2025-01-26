@@ -1,5 +1,5 @@
 import './assets/main.css'
-import MycomponentA from './MycomponentA.vue'
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
@@ -13,4 +13,4 @@ app.use(router)
 
 app.mount('#app')
 
-app.component('MycomponentA', MycomponentA);
+

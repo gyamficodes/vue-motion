@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
   const emit = defineEmits(['enlarge-text'])
-  const props = defineProps<{msg: string,}>()
+  const props = defineProps<{msg: string}>()
   
   const handleEnlargeText = () => {
     emit('enlarge-text')

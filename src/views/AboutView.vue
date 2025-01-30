@@ -6,12 +6,17 @@
     <WatchesLesson />
     <OtherLesson Title="Post 1" Content="This is about blog post" />
     <div class="mt-5" :style="{ fontSize: postFontSize + 'em' }">
-    <Texting @enlarge-text="postFontSize += 10" msg="Texting Page" />\
-
-</div>
-    <VueHooksLesson/>
+      <Texting @enlarge-text="postFontSize += 10" msg="Texting Page" />\
+    </div>
+    <VueHooksLesson />
   </div>
-  <PropsComponent :post="post" name="Gyamfi John"  Cobro="Kader Develoveper" greeting-message="Good evening"/>
+  <PropsComponent
+    :post="post"
+    name="Gyamfi John"
+    Cobro="Kader Develoveper"
+    greeting-message="Good evening"
+  />
+  <!-- <h1>{{ count }}</h1> -->
 </template>
 
 <script setup lang="ts">
@@ -25,7 +30,7 @@ import Texting from "@/components/Texting.vue";
 import VueHooksLesson from "@/components/VueHooksLesson.vue";
 import PropsComponent from "@/components/PropsComponent.vue";
 const postFontSize = ref<number>(1);
-
+import { provide } from "vue";
 
 interface Data {
   title: string;
@@ -37,11 +42,13 @@ let post = ref<Data>({
   content: "This is my first blog post",
 });
 
+const count = ref<number>(0);
 
+const addData = () => {
+  count.value++;
+};
 
-
-
-
+provide("counter", {count,addData});
 
 </script>
 

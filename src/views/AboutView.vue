@@ -11,7 +11,7 @@
 </div>
     <VueHooksLesson/>
   </div>
-  <PropsComponent name="Gyamfi John"  Cobro="Kader Develoveper" greeting-message="Good evening"/>
+  <PropsComponent :post="post" name="Gyamfi John"  Cobro="Kader Develoveper" greeting-message="Good evening"/>
 </template>
 
 <script setup lang="ts">

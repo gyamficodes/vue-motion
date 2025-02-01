@@ -15,8 +15,14 @@
     name="Gyamfi John"
     Cobro="Kader Develoveper"
     greeting-message="Good evening"
+    @increase-by="increaseCount"
   />
-  <!-- <h1>{{ count }}</h1> -->
+  <h1>{{ count1 }}</h1>
+ 
+
+  
+  <ModelComp v-model:countModel="countModel" v-model:messaging="messaging" />
+
 </template>
 
 <script setup lang="ts">
@@ -31,6 +37,11 @@ import VueHooksLesson from "@/components/VueHooksLesson.vue";
 import PropsComponent from "@/components/PropsComponent.vue";
 const postFontSize = ref<number>(1);
 import { provide } from "vue";
+import ModelComp from "@/components/ModelComp.vue";
+
+//two way binding
+let countModel = ref<number>(5);
+const messaging = ref<string>('Hello from parent');
 
 interface Data {
   title: string;
@@ -44,12 +55,17 @@ let post = ref<Data>({
 
 const count = ref<number>(0);
 
+const count1 = ref<number>(0);
 const addData = () => {
   count.value++;
 };
 
-provide("counter", {count,addData});
+provide("counter", { count, addData });
 
+function increaseCount() {
+  console.log(count.value++);
+}
+// increaseCount();
 </script>
 
 <style></style>

@@ -12,12 +12,13 @@
 
     //events
     <button @click="counter?.addData">AddData</button>
-<h1>{{ counter?.count }}</h1>
+    <h1>{{ counter?.count }}</h1>
+    <button @click="$emit('increaseCount')">addemiy</button>
   </div>
 </template>
 
 <script setup lang="ts">
-import { inject, type Ref } from 'vue';
+import { inject, type Ref } from "vue";
 
 interface Data {
   title: string;
@@ -40,6 +41,9 @@ if (counter) {
 } else {
   console.error("Injection failed: 'counter' not found.");
 }
+
+
+defineEmits(['increaseCount'])
 </script>
 
 <style scoped></style>

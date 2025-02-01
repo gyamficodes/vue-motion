@@ -6,13 +6,15 @@ this hook
 
 <script setup lang="ts">
 //unmounted hook
-import { onUnmounted } from 'vue';
+import { onUnmounted, ref } from 'vue';
 
-onUnmounted(() => {{ 
-     alert("Hello eorld");
- }})
 
- 
+const life = ref('never give up')
+onUnmounted(() => { 
+     alert(life.value);
+ })
+
+
 
 </script>
 

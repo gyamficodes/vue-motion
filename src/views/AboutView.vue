@@ -18,15 +18,15 @@
     @increase-by="increaseCount"
   />
   <h1>{{ count1 }}</h1>
- 
 
-  
-  <ModelComp v-model:countModel="countModel" v-model:messaging="messaging" />
-
+  <ModelComp
+    v-model:countModel="countModel"
+    v-model:messaging="messaging"
+  />
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import {  ref } from "vue";
 
 import Todo from "@/components/Todo.vue";
 import Eventhandle from "@/components/Eventhandle.vue";
@@ -41,7 +41,7 @@ import ModelComp from "@/components/ModelComp.vue";
 
 //two way binding
 let countModel = ref<number>(5);
-const messaging = ref<string>('Hello from parent');
+const messaging = ref<string>("Hello from parent");
 
 interface Data {
   title: string;

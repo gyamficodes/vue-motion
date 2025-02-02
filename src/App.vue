@@ -6,9 +6,10 @@ import HelloWorld from "./components/HelloWorld.vue";
 <template>
   <header>
     <div class="">
-      <nav>
+      <nav class=" space-x-1 text-slate-900 mx-auto">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/learning">learning</RouterLink>
       </nav>
     </div>
   </header>

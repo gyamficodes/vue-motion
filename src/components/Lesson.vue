@@ -59,9 +59,6 @@ const styleObject = reactive<stylingc>({
 });
 </script>
 
-
-
-
 <style scoped>
 .active {
   background: red;

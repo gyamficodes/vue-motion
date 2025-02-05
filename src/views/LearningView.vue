@@ -3,7 +3,9 @@
     <SlotComp>
       <template #header> <h1 class=" text-blue-600">This is footer design</h1> </template>
 
-      <p>This will go into the default slot.</p>
+      <template #default>
+        <p>This will go into the default slot.</p>
+      </template>
       
       <template #footer> <p class=" text-blue-600">This is footer design</p>  </template>
     </SlotComp>

@@ -1,6 +1,6 @@
 import './assets/main.css'
 
-import { createApp } from 'vue'
+import { createApp, ref } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
@@ -14,3 +14,5 @@ app.use(router)
 app.mount('#app')
 
 
+const sms = ref<string>('Hello world!')
+app.provide('sms1', sms);

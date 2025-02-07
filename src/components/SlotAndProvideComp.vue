@@ -31,8 +31,14 @@
       <slot name="footer" />
     </div>
   </div> -->
-    <button @click="injectData?.dispayMessage" class=" px-3 bg-red-500 text-white">DispalyMessage</button>
+    <button
+      @click="injectData?.dispayMessage"
+      class="px-3 bg-red-500 text-white"
+    >
+      DispalyMessage
+    </button>
     <h1>{{ injectData?.Page }}</h1>
+    <h1>{{ sms }}</h1>
   </div>
 </template>
 
@@ -42,11 +48,21 @@ import { inject, type Ref, ref } from "vue";
 
 const data = ref<string>("John is going to school");
 
-const injectData = inject<{ Page: Ref<number>; dispayMessage: () => void }>( "display");
+const injectData = inject<{ Page: Ref<number>; dispayMessage: () => void }>(
+  "display"
+);
 if (injectData) {
   const { Page, dispayMessage } = injectData;
 } else {
   console.error("Injection failed: 'counter' not found.");
+}
+
+const sms = inject<Ref<string>>("sms1");
+
+if (sms) {
+  console.log("Injected sms:", sms.value); // Access the value using .value
+} else {
+  console.log("Injection failed: 'sms1' not found.");
 }
 </script>
 

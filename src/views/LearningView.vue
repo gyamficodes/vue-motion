@@ -19,8 +19,10 @@
 </template>
 
 <script setup lang="ts">
-import SlotComp from "@/components/SlotComp.vue";
+import SlotComp from "@/components/SlotAndProvideComp.vue";
 import { provide, ref } from "vue";
+
+
 
 const dispayMessage = () => {
     alert("This is a message");

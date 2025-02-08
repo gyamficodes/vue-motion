@@ -39,13 +39,14 @@
     </button>
     <h1>{{ injectData?.Page }}</h1>
     <h1>{{ sms }}</h1>
+    <h1>{{ usingkey }}</h1>
   </div>
 </template>
 
 <script setup lang="ts">
 // inject this data from learning components
 import { inject, type Ref, ref } from "vue";
-
+import { myInjectionsKeys } from "@/keys/keys";
 const data = ref<string>("John is going to school");
 
 const injectData = inject<{ Page: Ref<number>; dispayMessage: () => void }>(
@@ -64,6 +65,11 @@ if (sms) {
 } else {
   console.log("Injection failed: 'sms1' not found.");
 }
+
+const usingkey = inject(myInjectionsKeys);
+
+
+
 </script>
 
 <style scoped></style>

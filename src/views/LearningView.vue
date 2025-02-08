@@ -11,16 +11,24 @@
       </template>
 
 
-
-
       <template #footer> <p class=" text-blue-600">This is footer design</p>  </template>
     </SlotComp>
+
+    <AsyncComp/>
   </div>
 </template>
 
 <script setup lang="ts">
 import SlotComp from "@/components/SlotAndProvideComp.vue";
-import { provide, ref } from "vue";
+import { onUnmounted, provide, ref } from "vue";
+import { myInjectionsKeys } from "@/keys/keys";
+import { defineAsyncComponent } from "vue";
+
+// async component
+const AsyncComp = defineAsyncComponent(() => 
+import('../components/AsyncCom.vue')
+)
+
 
 
 
@@ -33,7 +41,8 @@ const Page = ref<number>(50);
 
 provide("display", {dispayMessage, Page});
 
-
+const usingkey = ref<string>('Learn hard Bro')
+provide(myInjectionsKeys, usingkey);
  
 </script>
 

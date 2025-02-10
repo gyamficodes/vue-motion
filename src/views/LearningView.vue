@@ -18,9 +18,10 @@
   </div>
 </template>
 
+
 <script setup lang="ts">
 import SlotComp from "@/components/SlotAndProvideComp.vue";
-import { onUnmounted, provide, ref } from "vue";
+import {  provide, ref } from "vue";
 import { myInjectionsKeys } from "@/keys/keys";
 import { defineAsyncComponent } from "vue";
 

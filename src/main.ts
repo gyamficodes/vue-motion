@@ -1,6 +1,6 @@
 import './assets/main.css'
 
-import { createApp, ref } from 'vue'
+import { createApp, defineAsyncComponent, ref } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
@@ -16,3 +16,8 @@ app.mount('#app')
 
 const sms = ref<string>('Hello world!')
 app.provide('sms1', sms);
+
+
+// app.component('AsynComp',  defineAsyncComponent(() => (
+//     import('./components/AsyncCom.vue')
+// )));

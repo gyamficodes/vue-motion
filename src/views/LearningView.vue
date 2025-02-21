@@ -24,7 +24,7 @@
 <script setup lang="ts">
 import SlotComp from "@/components/SlotAndProvideComp.vue";
 import CompoComp from "@/components/CompoComp.vue";
-import directivesComponent from "@/components/directivesComponent.vue";
+import DirectivesComponent from "@/components/directivesComponent.vue";
 import {  provide, ref } from "vue";
 import { myInjectionsKeys } from "@/keys/keys";
 import { defineAsyncComponent } from "vue";

@@ -8,6 +8,17 @@ import Lesson from "@/components/Lesson.vue";
    <HelloWorld/>
    <Lesson/>
    <Listing/>
+   <h1 v-highlight>using vhighlight</h1>
 </template>
 
-<style></style>
+
+
+<style scoped>
+.is-highlight{
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+</style>

@@ -4,7 +4,7 @@
     </div>
 
     <div>
-        <h1 :class=" count <= 0 ?'text-red-900' : ' text-black'"  class=" text-[30px]">{{ count }}</h1>
+        <h1 :class=" count <= 1  || count >= 1 ?'text-red-900' : ' text-black'"  class=" text-[30px]">{{ count }}</h1>
         <div class=" flex items-center gap-1">
         <button class="w-[auto] p-1 bg-[#ccc] text-black" @click="decrement">DecreamentCount</button>
         <button class="w-[auto] p-1 bg-[#ccc] text-black" @click="reset" >REset</button>

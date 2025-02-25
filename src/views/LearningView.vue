@@ -18,6 +18,10 @@
     <CompoComp/>
     <DirectivesComponent/>
     <AnimationsComp/>
+    <KeepAlive>
+    <KeepAliveComp/>
+    </KeepAlive>
+    
   </div>
 </template>
 
@@ -27,6 +31,7 @@ import SlotComp from "@/components/SlotAndProvideComp.vue";
 import CompoComp from "@/components/CompoComp.vue";
 import DirectivesComponent from "@/components/DirectivesComponent.vue";
 import AnimationsComp from "@/components/AnimationsComp.vue";
+import KeepAliveComp from "@/components/KeepAliveComp.vue";
 import {  provide, ref } from "vue";
 import { myInjectionsKeys } from "@/keys/keys";
 import { defineAsyncComponent } from "vue";

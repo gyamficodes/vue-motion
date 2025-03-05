@@ -10,6 +10,8 @@
     <button @click="updateMessage" class="p-3 py-3 bg-gray-400 text-black">
       Update Message!
     </button>
+    
+    <input type="text" placeholder="typae news" v-model="News" class="border">
   </div>
 </template>
 
@@ -18,8 +20,9 @@ import { ref } from "vue";
 
 let countModel = defineModel<number>("countModel");
 let messaging = defineModel<string>("messaging");
-
+let News = defineModel<string>("News");
 let up = ref<string>("");
+
 function update() {
   if (countModel.value !== undefined) {
     countModel.value++;

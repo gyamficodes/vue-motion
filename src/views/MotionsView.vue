@@ -1,19 +1,14 @@
 <template>
-    <div>
+  <div>
+    <h1>Adding Framer Motion To Vue</h1>
 
 
-<h1></h1>
 
 
-    </div>
+    
+  </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-
-
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>

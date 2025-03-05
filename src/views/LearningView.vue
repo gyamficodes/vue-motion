@@ -26,6 +26,7 @@
       <component :is="activeComponent" />
     </KeepAlive>
     <TeleportComp/>
+    <PiniaStoreComp/>
   </div>
 </template>
 
@@ -39,7 +40,7 @@ import { markRaw, provide, ref } from "vue";
 import { myInjectionsKeys } from "@/keys/keys";
 import { defineAsyncComponent } from "vue";
 import TeleportComp from "@/components/TeleportComp.vue";
-
+import PiniaStoreComp from "@/components/PiniaStoreComp.vue";
 
 // async component
 const AsyncComp = defineAsyncComponent(

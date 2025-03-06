@@ -21,6 +21,18 @@
   <h1>{{ News }}</h1>
   <ModelComp v-model:News="News" v-model:countModel="countModel" v-model:messaging="messaging" />
 
+
+  <section
+      v-for="(product, index) in products"
+      :key="product.id"
+      v-motion="`product-${index}`"
+      :initial="{ opacity: 0, x: -100 }"
+      :enter="{ opacity: 1, x: 0, transition: { delay: index * 200, duration: 600 } }"
+    >
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+    </section>
+
 </template>
 
 <script setup lang="ts">
@@ -65,6 +77,13 @@ function increaseCount() {
   console.log(count.value++);
 }
 // increaseCount();
+
+
+
+
 </script>
 
-<style></style>
+<style>
+
+
+</style>

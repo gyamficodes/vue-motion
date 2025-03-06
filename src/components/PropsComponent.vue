@@ -5,9 +5,9 @@
     <h1>{{ props.Cobro }}</h1>
     <h1>{{ greetingMessage }}</h1>
     <div>
-      <h1 v-for="([key, value], index) in Object.entries(post)" :key="index">
+      <div v-for="([key, value], index) in Object.entries(post)" :key="index">
         <h1>{{ key }}: {{ value }}</h1>
-      </h1>
+      </div>
     </div>
 
     //events

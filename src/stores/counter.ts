@@ -10,3 +10,19 @@ export const useCounterStore = defineStore('counter', () => {
 
   return { count, doubleCount, increment }
 })
+
+
+
+export const useCounterStoreB = defineStore("counterB" ,() => {
+ 
+   const countB = ref<number>(0)
+
+     function incrementData(this: any){
+      countB.value++ * 2
+     }
+      
+  return {
+    countB, incrementData
+  };
+
+})

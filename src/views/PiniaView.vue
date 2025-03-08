@@ -8,6 +8,10 @@
       Reset
     </button>
 
+
+    <p>Message from Store: {{ message }}</p>
+    <p>Updated Message: {{ updateMessage }}</p>
+    <button @click="changeMessage">Change Message</button>
   </div>
 </template>
 
@@ -21,6 +25,24 @@ import { useInfoStore } from "@/stores/gettersStore";
 const counterStore = useCounterStoreB();
 let { countB } = storeToRefs(counterStore);
 let { incrementData, $reset } = counterStore;
+
+
+
+
+// Access the store
+const infoStore = useInfoStore();
+
+// Use storeToRefs to destructure reactive state/getters
+const { Message: message, updateMessage} = storeToRefs(infoStore);
+
+// Access actions (if needed)
+const { setMessage } = infoStore;
+
+// Method to update the message
+function changeMessage() {
+  setMessage("New Message from Component");
+}
+
 
 
 

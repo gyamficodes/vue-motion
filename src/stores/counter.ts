@@ -18,16 +18,19 @@ export const useCounterStoreB = defineStore("counterB" ,() => {
    const countB = ref<number>(0)
 
      function incrementData(this: any){
-      countB.value++ * 2
+      countB.value++ 
      }
+
+  function $reset(){
+    countB.value = 0;
+  }
       
   return {
-    countB, incrementData
+    countB, 
+    incrementData,
+    $reset
   };
 
 })
 
 
-export const useSms = defineStore('sms', () => {
-     const sms =  inject('sms1')     
-})

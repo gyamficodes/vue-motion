@@ -17,7 +17,7 @@ export const useApiStore = defineStore("apistore", () => {
     error.value = null;
     try {
       const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/posts"
+        "https://jsonplaceholder.typic.ode.com/posts"
       );
       data.value = response.data;
     } catch (error: any | null) {

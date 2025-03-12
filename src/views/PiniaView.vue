@@ -38,6 +38,8 @@
 
     <!-- Display message if no data is fetched -->
     <p v-else-if="!loading">No data available.</p>
+
+    <Counter/>
   </div>
 </template>
 
@@ -46,7 +48,7 @@ import { useCounterStoreB } from "@/stores/counter";
 import { storeToRefs } from "pinia";
 import { useInfoStore } from "@/stores/gettersStore";
 import { useApiStore } from "@/stores/apiStore";
-
+import Counter from "@/components/VueTestComp/Counter.vue";
 const counterStore = useCounterStoreB();
 let { countB } = storeToRefs(counterStore);
 let { incrementData, $reset } = counterStore;

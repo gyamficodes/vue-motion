@@ -20,3 +20,4 @@ const {doubleCount, increment} = Store;
 <style scoped>
 
 </style>
+

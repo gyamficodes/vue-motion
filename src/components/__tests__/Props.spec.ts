@@ -14,5 +14,6 @@ describe("PropsComponent.vue", () => {
     expect(wrapper.props()).toMatchObject(props);
   });
 
-  
+  it('emits event correctly', )
+
 });

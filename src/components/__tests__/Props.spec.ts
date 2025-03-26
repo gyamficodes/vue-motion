@@ -41,4 +41,5 @@ describe("PropsComponent.vue", () => {
     // Assert that the event was emitted
     expect(wrapper.emitted()).toHaveProperty('increaseCount');
   });
+  
 });

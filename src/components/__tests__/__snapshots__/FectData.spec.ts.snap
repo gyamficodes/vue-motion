@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Counter Component > matches snapshot 1`] = `
+"<div>
+  <h1 class="text-[40px] text-red-400">0</h1>
+  <div class="flex items-center gap-4"><button>Decrease</button><button>Reset</button><button>Increase</button></div>
+</div>"
+`;

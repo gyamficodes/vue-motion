@@ -13,7 +13,7 @@ export const useApiStore = defineStore("apistore", () => {
   const error = ref<string | null>(null);
 
   async function fetchData() {
-    loading.value = true;
+    loading.value = true;  
     error.value = null;
     try {
       const response = await axios.get(

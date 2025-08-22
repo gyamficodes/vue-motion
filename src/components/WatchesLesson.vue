@@ -46,4 +46,4 @@ watch(
 </script>
 
 <style scoped></style>
-md:h-[500px]
+

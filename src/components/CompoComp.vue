@@ -19,8 +19,8 @@ import { useMouse } from '@/composables/mouse';
 import { useCounter } from '@/composables/counter';
 
 const { x, y } = useMouse();
-const store = useCounter()
-const {count, increment, decrement, reset} = store;
+const ComposablesCounter = useCounter()
+const {count, increment, decrement, reset} = ComposablesCounter;
 </script>
 
 <style scoped>

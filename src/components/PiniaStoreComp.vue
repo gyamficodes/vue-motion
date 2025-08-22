@@ -13,8 +13,6 @@ import { storeToRefs } from 'pinia';
 const Store = useCounterStore();
 const  count = storeToRefs(Store);
 const {doubleCount, increment} = Store;
-
-
 </script>
 
 <style scoped>

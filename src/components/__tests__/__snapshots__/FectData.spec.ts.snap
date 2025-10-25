@@ -6,6 +6,3 @@ exports[`Counter Component > matches snapshot 1`] = `
   <div class="flex items-center gap-4"><button>Decrease</button><button>Reset</button><button>Increase</button></div>
 </div>"
 `;
-
-
-

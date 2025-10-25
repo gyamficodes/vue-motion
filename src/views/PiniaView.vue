@@ -49,6 +49,7 @@ import { storeToRefs } from "pinia";
 import { useInfoStore } from "@/stores/gettersStore";
 import { useApiStore } from "@/stores/apiStore";
 import Counter from "@/components/VueTestComp/Counter.vue";
+import { onMounted } from "vue";
 const counterStore = useCounterStoreB();
 let { countB } = storeToRefs(counterStore);
 let { incrementData, $reset } = counterStore;
@@ -76,8 +77,13 @@ const apiStore = useApiStore();
 const { data, loading, error } = storeToRefs(apiStore);
 const { fetchData, deleteItem } = apiStore;
 
-// Fetch data when the component is mounted (optional)
-fetchData();
+// Fetch data when the component is mounted (optional)n
+onMounted(() => fetchData() )
+
+
+
+
+
 </script>
 
 <style scoped></style>

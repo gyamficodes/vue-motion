@@ -1,6 +1,6 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-import { inject } from 'vue'
+// import { inject } from 'vue'
 export const useCounterStore = defineStore('counter', () => {
   const count = ref<number>(0)
   const doubleCount = computed(() => count.value * 2)
@@ -17,7 +17,7 @@ export const useCounterStoreB = defineStore("counterB" ,() => {
  
    const countB = ref<number>(0)
 
-     function incrementData(this: any){
+     function incrementData(){
       countB.value++ 
      }
 

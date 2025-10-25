@@ -8,7 +8,7 @@ describe("PropsComponent.vue", () => {
       name: "John",
       Cobro: "Hello WOrld",
       greetingMessage: "Good Morning",
-      post: { title: "Gyamficodes", content: "Learning Vitest" }, // ✅ Ensure `post` is defined
+      post: { title: "Gyamficodes", content: "Learning Vitest" }, // Ensure `post` is defined
     };
     const wrapper = mount(PropsComponent, { props });
     expect(wrapper.props()).toMatchObject(props);

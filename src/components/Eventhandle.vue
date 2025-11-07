@@ -40,6 +40,7 @@
       {{ SubscribesMessage }}
     </h1>
 
+    
     <!-- Select Input -->
     <select v-model="selected">
   <option v-for="option in options" :value="option.value">

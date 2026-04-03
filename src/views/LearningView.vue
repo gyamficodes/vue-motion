@@ -62,4 +62,8 @@ const activeComponent = ref(markRaw(KeepAliveComp)); // Prevents making it react
 
 </script>
 
-<style scoped></style>
+<style scoped>
+hi{
+  
+}
+</style>
